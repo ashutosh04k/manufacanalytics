@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: geriatric-assessment-form
+    runtime: static
+    buildCommand: corepack enable && yarn install && yarn build
+    staticPublishPath: ./dist
+    envVars:
+      - key: NODE_VERSION
+        value: 22.13.1
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

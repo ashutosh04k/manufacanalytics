@@ -96,9 +96,25 @@ Vitest + React Testing Library are configured in:
 
 ---
 
-## 🌐 Deployment
+## 🌐 Deployment (Render)
 
-This application can be deployed to Vercel, Netlify, or GitHub Pages.
-- Build command: `yarn build`
-- Output directory: `dist`
-- **Live URL**: *(Deploy to Vercel/Netlify and paste URL here)*
+This repository includes a [`render.yaml`](./render.yaml) blueprint for 1-click deployment on [Render](https://render.com).
+
+### Render Configuration
+- **Type**: Static Site
+- **Build Command**: `corepack enable && yarn install && yarn build`
+- **Publish Directory**: `./dist`
+- **Node Version**: `22.13.1` (set via `NODE_VERSION` environment variable)
+- **SPA Rewrite**: `/*` -> `/index.html`
+
+### Steps to Deploy on Render
+1. Log in to [dashboard.render.com](https://dashboard.render.com/).
+2. Click **New +** and select **Static Site** (or **Blueprint** to use `render.yaml` directly).
+3. Connect your repository: `https://github.com/ashutosh04k/manufacanalytics`.
+4. Enter the build settings:
+   - **Build Command**: `corepack enable && yarn install && yarn build`
+   - **Publish Directory**: `dist`
+5. In **Advanced**, add Environment Variable:
+   - `NODE_VERSION`: `22`
+6. Click **Create Static Site**. Render will build and deploy your application.
+7. **Live URL**: *(Paste your deployed Render URL here once live)*
