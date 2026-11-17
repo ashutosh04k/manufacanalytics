@@ -104,7 +104,9 @@ This repository includes a [`render.yaml`](./render.yaml) blueprint for 1-click 
 - **Type**: Static Site
 - **Build Command**: `corepack enable && yarn install && yarn build`
 - **Publish Directory**: `./dist`
-- **Node Version**: `22.13.1` (set via `NODE_VERSION` environment variable)
+- **Environment Variables**:
+  - `NODE_VERSION`: `22`
+  - `SKIP_INSTALL_DEPS`: `true` (skips Render's legacy Yarn 1 pre-installer so modern Yarn 4 runs in the build command)
 - **SPA Rewrite**: `/*` -> `/index.html`
 
 ### Steps to Deploy on Render
@@ -114,7 +116,8 @@ This repository includes a [`render.yaml`](./render.yaml) blueprint for 1-click 
 4. Enter the build settings:
    - **Build Command**: `corepack enable && yarn install && yarn build`
    - **Publish Directory**: `dist`
-5. In **Advanced**, add Environment Variable:
+5. In **Advanced**, add Environment Variables:
    - `NODE_VERSION`: `22`
-6. Click **Create Static Site**. Render will build and deploy your application.
+   - `SKIP_INSTALL_DEPS`: `true`
+6. Click **Create Static Site** (or **Manual Deploy** &rarr; **Clear build cache & deploy** if updating an existing deployment).
 7. **Live URL**: *(Paste your deployed Render URL here once live)*
