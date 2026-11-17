@@ -2,6 +2,8 @@
 
 A single-page Geriatric Care Assessment form built with **React 19**, **TypeScript**, **Mantine (v9)**, and **Zod (v4)**. Designed for visiting nurses checking on elderly patients at home.
 
+🔗 **Live Demo**: [https://manufacanalytics-jd3z.onrender.com](https://manufacanalytics-jd3z.onrender.com/)
+
 ---
 
 ## 🚀 Getting Started
@@ -120,4 +122,4 @@ This repository includes a [`render.yaml`](./render.yaml) blueprint for 1-click 
    - `NODE_VERSION`: `22`
    - `SKIP_INSTALL_DEPS`: `true`
 6. Click **Create Static Site** (or **Manual Deploy** &rarr; **Clear build cache & deploy** if updating an existing deployment).
-7. **Live URL**: *(Paste your deployed Render URL here once live)*
+7. **Live URL**: [https://manufacanalytics-jd3z.onrender.com/](https://manufacanalytics-jd3z.onrender.com/)
